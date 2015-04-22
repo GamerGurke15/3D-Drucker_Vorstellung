@@ -75,6 +75,7 @@ In diesem Fall muss der Extruder auf die für das gewünschte Filament benötigt
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 \end{itemize}
 \vspace{10pt}
+
 \item \textbf{Das gedruckte Objekt hält nicht auf der Heizplatte.}\\
 Für dieses Problem gibt es keine ultimative Lösung. Wir haben haben mehrere Faktoren gefunden, die dafür verantwortlich sind:
 \begin{itemize}
@@ -84,8 +85,14 @@ Die Temperatur der Heizplatte ist zumindest für PLA auf $60^\circ$ zu erhitzen.
 Je nach dem, ob das Objekt eine kleine Standfläche hat und hoch ist, bzw. eine sehr breite Standfläche hält es unterschiedlich gut. Weiterhin ist es wichtig einen \enquote{Brim} oder einen \enquote{Raft} zu drucken. Ein \enquote{Brim} sind mehrere Linien um das objekt herum, die schnell zu drucken sind und den Halt der Objektes verbessern. Ein \enquote{Raft} hingegen ist eine Platform, auf der das Objekt gedruckt wird. Diese hält durch eine besondere Beschaffenheit an der Unterseite besonders gut auf dem Heizbrett, dauert aber auch entsprechend lange zu drucken.
 \item \textit{Position auf dem Heizbrett}\\
 Wir haben festgestellt, dass Objekte die auf der linken , hinteren Ecke gedruckt werden besser halten als andere.
+\item \textit{Der Extruder ist zu hoch über der Heizplatte}\\
+Wenn der Extruder zu hoch über der Heizplatte druckt, kühlt das Filament ab, bevor es auf die Heizplatte trifft und hält dort nicht mehr. Daher sollte man \textbf{VORSICHTIG} den Extruder über die Knöpfe herunter fahren.
 \item \textit{Wenn nichts hilft}\\
 Sonst haben wir in einem Forum gelesen, dass Hairspray (möglichst das billigste) auf der Heizplatte den Halt stark verbessert. Momentan liegt ein Haarspray bei dem 3D-Drucker dabei und hat auch schon seine Dienste geleistet.
 \end{itemize}
+\vspace{10pt}
+
+\item \textbf{Extruder kratzt auf der Heizplatte}\\
+Sollte der Extruder auf der Heizplatte kratzen sollte der Druck direkt pausiert oder abgebrochen werden um Schaden an der Heizplatte zu verhindern. Wenn auf der Heizplatte leichte schwarze Spuren zu erkennen sind sollten diese im kalten Zustand der Heizplatte so weit wie möglich abgewischt werden. Das Problem liegt darin, dass die Heizplatte falsch gescannt wurde. Dies sollte dann nachgeholt werden. Auf dem 3D-Drucker im Menü \textit{Configuration/Z Calib./Heat Bed Scan} (siehe offizielles Manual S.57 ff.).
 \end{description}
 \end{document}
