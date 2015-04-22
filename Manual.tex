@@ -20,7 +20,7 @@
 \end{center}
 \pagebreak
 \tableofcontents
-\pagebreak
+\vspace{11pt}
 %---------------------------Jochen----------------------------------------------
 \section{Erstellen von 3D Objekten}
 Für die Erstellung von 3d-Objekten ist die Verwendung von spezieller 3d-Software notwendig. Welche Software am sinnvollsten ist, hängt von dem zu erstellenden Objekt ab. Organische Objekte werden am Besten mit einem \enquote{normalen} 3d-Programm wie \textbf{Blender} erstellt, Während technische Objekte wie Zahnräder mit einem \textit{computer-aided design}-Programm (kurz CAD-Programm) erstellt - hier empfehle ich das kostenlose Programm \textbf{FreeCAD}. Beide Programme können Modelle als stl-Datei speichern - Dieses Format ist im 3d-Druck üblich. Im Gegensatz zur herkömmlichen 3d-Modellierung muss bei der Erstellung von zu druckenden Objekten nicht versucht werden die Anzahl der Polygone möglichst gering zu halten - im Gegenteil kann eine größere Anzahl an Polygonen nie schaden: Der 3d-Drucker beachtet die in der 3d-Graphik häufig benutzten Normalen nicht - dadurch erscheinen gedruckte Objekte sehr viel weniger Rund als sie auf dem Bildschirm aussehen.
@@ -32,6 +32,7 @@ Die Verwendung der beiden Programme ist sehr komplex und kann hier nicht komplet
 \end{itemize}
 
 \subsection*{Downloads:}
+\addcontentsline{toc}{subsection}{Downloads}
 \begin{itemize}
   \item \textbf{Blender} \url{http://www.blender.org/download/}
   \item \textbf{FreeCAD} \url{http://www.freecadweb.org/}
@@ -98,7 +99,6 @@ In diesem Fall ist der Extruder auf die für das gewünschte Filament benötigte
 In diesem Fall muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden. Wenn dieser heiß ist kann man den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 \end{itemize}
-\vspace{10pt}
 
 \item \textbf{Das gedruckte Objekt hält nicht auf der Heizplatte.}\\
 \addcontentsline{toc}{subsection}{Das gedruckte Objekt hält nicht auf der Heizplatte}
@@ -115,21 +115,34 @@ Wenn der Extruder zu hoch über der Heizplatte druckt, kühlt das Filament ab, b
 \item \textit{Wenn nichts hilft}\\
 Sonst haben wir in einem Forum gelesen, dass Haarspray (möglichst das billigste) auf der Heizplatte den Halt stark verbessert. Momentan liegt ein Haarspray bei dem 3D-Drucker dabei und hat auch schon seine Dienste geleistet.
 \end{itemize}
-\vspace{10pt}
 
 \item \textbf{Der Extruder kratzt auf der Heizplatte.}\\
 \addcontentsline{toc}{subsection}{Der Extruder kratzt auf der Heizplatte}
 Sollte der Extruder auf der Heizplatte kratzen sollte der Druck direkt pausiert oder abgebrochen werden um Schaden an der Heizplatte zu verhindern. Wenn auf der Heizplatte leichte schwarze Spuren zu erkennen sind sollten diese im kalten Zustand der Heizplatte so weit wie möglich abgewischt werden. Das Problem liegt darin, dass die Heizplatte falsch gescannt wurde. Dies sollte dann nachgeholt werden. Auf dem 3D-Drucker im Menü \textit{Configuration/Z Calib./Heat Bed Scan} (siehe offizielles Manual S.57 ff.).\\
 Temporär kann man dies auch über die manuelle Kontrolle des Extruders beheben, wobei man unbedingt aufpassen muss, dass der Extruder nicht die Platte zerstört, oder die Platte den Z-Schalter.
-\vspace{10pt}
 
 \item \textbf{Das Filament bricht.}\\
 \addcontentsline{toc}{subsection}{Das Filament bricht}
 Wenn das Filament bricht ist es am sinnvollsten, das Filament direkt über dem Extruder, also zwischen Extruder und Z-Motor abzuschneiden und dann neues nachzufüllen. \textbf{ACHTUNG: dazu muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden.} Danach sollte noch ein bisschen Filament nachgedrückt werden um zu gewährleisten, dass das neue Filament auch in den Extruder eingefüllt wird.
-\vspace{10pt}
 
 \item \textbf{Der Extruder verstopft.}\\
 \addcontentsline{toc}{subsection}{Der Extruder verstopft}
-Jetzt weiß man auf jeden Fall, dass man einen der vorherigen Beschreibungen nicht richtig beachtet hat. Eigentlich ist der Extruder jetzt auszuwechseln, da dies aber kostspielig ist (\url{http://goo.gl/J6Bhq2} (Conrad.de 50\euro)) empfehlen wir zuerst zu versuchen, das Filament \textit{rauszuschmelzen}. Hierzu haben wir den Heizluft Föhn der Schule verwendet und den oberen Teil des Extruders so lange erhitzt, bis das Filament auf raus gelaufen ist und keines mehr drin war. Hierbei muss man aber darauf achten, dass die Kabel nicht schmelzen bzw. der Extruder anderweitig beschädigt wird. Andere Leute haben in Foreneinträgen berichtet, dass Filament aus dem Extruder \textit{rausgebohrt} zu haben. Dies haben wir uns nicht getraut, da wir keinen Millimeter genauen Bohrer zur Hand hatten.
+Jetzt weiß man auf jeden Fall, dass man einen der vorherigen Beschreibungen nicht richtig beachtet hat. Eigentlich ist der Extruder jetzt auszuwechseln, da dies aber kostspielig ist (\url{http://goo.gl/J6Bhq2} (Conrad.de 50\euro)) empfehlen wir zuerst zu versuchen, das Filament \textit{herauszuschmelzen}. Hierzu haben wir den Heizluft Föhn der Schule verwendet und den oberen Teil des Extruders so lange erhitzt, bis das Filament auf raus gelaufen ist und keines mehr drin war. Hierbei muss man aber darauf achten, dass die Kabel nicht schmelzen bzw. der Extruder anderweitig beschädigt wird. Andere Leute haben in Foreneinträgen berichtet, dass Filament aus dem Extruder \textit{rausgebohrt} zu haben. Dies haben wir uns nicht getraut, da wir keinen Millimeter genauen Bohrer zur Hand hatten.
+
+\item \textbf{Der Drucker wird nicht erkannt.}\\
+\addcontentsline{toc}{subsection}{Der Drucker wird nicht erkannt.}
+Hierfür gibt es viele verschiedene Möglichkeiten:
+\begin{itemize}
+\item \textit{Der Drucker ist aus}\\
+Hier sollte der Drucker an den Stromkreis des Hauses angeschlossen (am Besten an eine Steckdose) werden und daraufhin der Schalter auf der Rückseite des 3D-Druckers auf ein gestellt werden (I \textbf{nicht} O).
+\item \textit{Das Kabel ist im PC oder im Drucker nicht eingesteckt}\\
+Dies ist auch relativ einfach zu lösen. Hier sollte das Ende mit dem USB-Anschluss Type B in den Drucker eingesteckt werden und das Ende mit dem USB-Anschluss Type A in einen der USB Ports am PC.
+\item \textit{Das USB-Kabel ist kaputt}\\
+Nun sollte ein neues gekauft werden. Auf der einen Seite sollte dieses einen USB-Anschluss Type A (2.0 oder 3.0) haben und auf der anderen Seite einen USB-Anschluss Type B (2.0).
+\item \textit{Der USB-Port ist kaputt}
+Sollte der PC weitere USB-Ports besitzen, so sollten dieser als eine weitere Möglichkeit konsultiert werden, soweit dessen Version 2.0 oder höher ist.
+\item \textit{Es sind keine Druckertreiber installiert}
+In diesem Fall wurden die Treiber bei der Installation von Cura/RepetierHost nicht mit installiert. Das sinnvollste ist es diese Programme neu zu installieren und darauf zu achten, dass diesmal die Drucker Treiber installiert werden.
+\end{itemize}
 \end{description}
 \end{document}
