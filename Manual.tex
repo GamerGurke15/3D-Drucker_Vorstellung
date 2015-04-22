@@ -8,6 +8,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage[autostyle]{csquotes}
+\usepackage{eurosym}
 \usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
 
 \author{Leonard Hackel, Jochen Jacobs, Niklas Schelten}
@@ -71,7 +72,7 @@ In diesem Fall ist der Extruder auf die für das gewünschte Filament benötigte
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 
 \item \textit{Es ist vorher Filament aus dem Extruder gelaufen, ohne, dass welches nachgechoben wurde:}\\
-In diesem Fall muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$) erhitzt werden. Wenn dieser heiß ist kann man den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
+In diesem Fall muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden. Wenn dieser heiß ist kann man den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 \end{itemize}
 \vspace{10pt}
@@ -92,7 +93,16 @@ Sonst haben wir in einem Forum gelesen, dass Hairspray (möglichst das billigste
 \end{itemize}
 \vspace{10pt}
 
-\item \textbf{Extruder kratzt auf der Heizplatte}\\
-Sollte der Extruder auf der Heizplatte kratzen sollte der Druck direkt pausiert oder abgebrochen werden um Schaden an der Heizplatte zu verhindern. Wenn auf der Heizplatte leichte schwarze Spuren zu erkennen sind sollten diese im kalten Zustand der Heizplatte so weit wie möglich abgewischt werden. Das Problem liegt darin, dass die Heizplatte falsch gescannt wurde. Dies sollte dann nachgeholt werden. Auf dem 3D-Drucker im Menü \textit{Configuration/Z Calib./Heat Bed Scan} (siehe offizielles Manual S.57 ff.).
+\item \textbf{Der Extruder kratzt auf der Heizplatte.}\\
+Sollte der Extruder auf der Heizplatte kratzen sollte der Druck direkt pausiert oder abgebrochen werden um Schaden an der Heizplatte zu verhindern. Wenn auf der Heizplatte leichte schwarze Spuren zu erkennen sind sollten diese im kalten Zustand der Heizplatte so weit wie möglich abgewischt werden. Das Problem liegt darin, dass die Heizplatte falsch gescannt wurde. Dies sollte dann nachgeholt werden. Auf dem 3D-Drucker im Menü \textit{Configuration/Z Calib./Heat Bed Scan} (siehe offizielles Manual S.57 ff.).\\
+Temporär kann man dies auch über die manuelle Kontrolle des Extruders beheben, wobei man unbedingt aufpassen muss, dass der Extruder nicht die Platte zerstört, oder die Platte den Z-Schalter.
+\vspace{10pt}
+
+\item \textbf{Das Filament bricht.}\\
+Wenn das Filament bricht ist es am sinnvollsten, das Filament direkt über dem Extruder, also zwischen Extruder und Z-Moter abzuschneiden und dann neues nachzufüllen. \textbf{ACHTUNG: dazu muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden.} Danach sollte noch ein bisschen Filament nachgedrückt werden um zu gewährleisten, dass das neue Filament auch in den Extruder eingefüllt wird.
+\vspace{10pt}
+
+\item \textbf{Der Extruder verstopft.}\\
+Jetzt weiß man auf jeden Fall, dass man einen der vorherigen Beschreibungen nicht richtig beachtet hat. Eigentlich ist der Extruder jetzt auszuwechseln, da dies aber kostspielig ist (\url{http://goo.gl/J6Bhq2} (Conrad.de 50\euro)) empfehlen wir zuerst zu versuchen, das Filament \textit{rauszuschmelzen}. Hierzu haben wir den Heizluft Föhn der Schule verwendet und den oberen Teil des Extruders so lange erhitzt, bis das Filament auf rausgelaufen ist und keines merh drin war. Hierbei muss man aber daruaf achten, dass die Kabel nicht schmelzen bzw. der Extruder anderweitig beschädigt wird. Andere Leute haben in Foreneinträgen berichtet, dass Filament aus dem Extruder \textit{rausgebohrt} zu haben. Dies haben wir uns nciht getraut, da wir keinen Milimeter genauen Bohrer zur Hand hatten.
 \end{description}
 \end{document}
