@@ -23,9 +23,9 @@
 \pagebreak
 %---------------------------Jochen----------------------------------------------
 \section{Erstellen von 3D Objekten}
-Fuer die Erstellung von 3d-Objekten ist die Verwendung von spezieller 3d-Software notwendig. Welche Software am sinnvollsten ist, h"angt von dem zu erstellenden Objekt ab. Organische Objekte werden am Besten mit einem \enquote{normalen} 3d-Programm wie \textbf{Blender} erstellt, W"ahrend technische Objekte wie Zahnr"ader mit einem \textit{computer-aided design}-Programm (kurz CAD-Programm) erstellt - hier empfehle ich das kostenlose Programm \textbf{FreeCAD}. Beide Programme k"onnen Modelle als stl-Datei speichern - Dieses Format ist im 3d-Druck "ublich. Im Gegensatz zur herk"omlichen 3d-Modelierung muss bei der Erstellung von zu druckenden Objekten nicht versucht werden die Anzahl der Poligone moeglichst gering zu halten - im Gegenteil kann eine gr"o"sere Anzahl an Poligonen nie schaden: Der 3d-Drucker beachtet die in der 3d-Graphik h"aufig benutzten Normalen nicht - dadurch erscheinen gedruckte Objekte sehr viel weniger Rund als sie auf dem Bildschirm aussehen.
+Für die Erstellung von 3d-Objekten ist die Verwendung von spezieller 3d-Software notwendig. Welche Software am sinnvollsten ist, hängt von dem zu erstellenden Objekt ab. Organische Objekte werden am Besten mit einem \enquote{normalen} 3d-Programm wie \textbf{Blender} erstellt, Während technische Objekte wie Zahnräder mit einem \textit{computer-aided design}-Programm (kurz CAD-Programm) erstellt - hier empfehle ich das kostenlose Programm \textbf{FreeCAD}. Beide Programme können Modelle als stl-Datei speichern - Dieses Format ist im 3d-Druck üblich. Im Gegensatz zur herkömmlichen 3d-Modellierung muss bei der Erstellung von zu druckenden Objekten nicht versucht werden die Anzahl der Polygone möglichst gering zu halten - im Gegenteil kann eine größere Anzahl an Polygonen nie schaden: Der 3d-Drucker beachtet die in der 3d-Graphik häufig benutzten Normalen nicht - dadurch erscheinen gedruckte Objekte sehr viel weniger Rund als sie auf dem Bildschirm aussehen.
 
-Die verwendung der beiden Programme ist sehr komplex und kann hier nicht komplett beschrieben werden. Besonders zu empfehlen sind gerade in diesem Bereich auch Toutorial-Videos auf YouTube. Als Beispiel zur erstellung habe ich zu beiden Programmen je ein kurzes Video erstellt und auf YouTube hochgeladen:
+Die Verwendung der beiden Programme ist sehr komplex und kann hier nicht komplett beschrieben werden. Besonders zu empfehlen sind gerade in diesem Bereich auch Tutorial-Videos auf YouTube. Als Beispiel zur Erstellung habe ich zu beiden Programmen je ein kurzes Video erstellt und auf YouTube hochgeladen:
 \begin{itemize}
   \item \textbf{Blender} \url{https://youtu.be/BRPZsZmmzIY}
   \item \textbf{FreeCAD} \url{https://youtu.be/2ebwCnLCgOo}
@@ -83,47 +83,53 @@ Probleme:
 -Extruder verstopft (sollte bei Beachtung der anderen Fehler nicht passiere)
 \fi
 
-Beim Drucken von 3D Objekten können viele verschieden und unterschiedlich schwerwiegende Probleme auftreten. Hier sind die jeningen gelistet, dioe uns am häufigsten passiert sind:\\
+Beim Drucken von 3D Objekten können viele verschieden und unterschiedlich schwerwiegende Probleme auftreten. Hier sind diejenigen gelistet, die uns am häufigsten passiert sind:\\
 \begin{description}
+
 \item \textbf{Aus dem Extruder kommt nichts heraus.}\\
+\addcontentsline{toc}{subsection}{Aus dem Extruder kommt nichts heraus}
 Für dieses Problem kann es verschiedene Ursachen geben:
 \begin{itemize}
 \item \textit{Es ist kein Filament eingelegt:}\\
 In diesem Fall ist der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA $210^\circ$C) zu erhitzen. Wenn dieser heiß ist kann man das Filament in den Extruder einführen und den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 
-\item \textit{Es ist vorher Filament aus dem Extruder gelaufen, ohne, dass welches nachgechoben wurde:}\\
+\item \textit{Es ist vorher Filament aus dem Extruder gelaufen, ohne, dass welches nachgeschoben wurde:}\\
 In diesem Fall muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden. Wenn dieser heiß ist kann man den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 \end{itemize}
 \vspace{10pt}
 
 \item \textbf{Das gedruckte Objekt hält nicht auf der Heizplatte.}\\
+\addcontentsline{toc}{subsection}{Das gedruckte Objekt hält nicht auf der Heizplatte}
 Für dieses Problem gibt es keine ultimative Lösung. Wir haben haben mehrere Faktoren gefunden, die dafür verantwortlich sind:
 \begin{itemize}
 \item \textit{Temperatur der Heizplatte}\\
 Die Temperatur der Heizplatte ist zumindest für PLA auf $60^\circ$ zu erhitzen.
 \item \textit{Beschaffenheit des Objekts}\\
-Je nach dem, ob das Objekt eine kleine Standfläche hat und hoch ist, bzw. eine sehr breite Standfläche hält es unterschiedlich gut. Weiterhin ist es wichtig einen \enquote{Brim} oder einen \enquote{Raft} zu drucken. Ein \enquote{Brim} sind mehrere Linien um das objekt herum, die schnell zu drucken sind und den Halt der Objektes verbessern. Ein \enquote{Raft} hingegen ist eine Platform, auf der das Objekt gedruckt wird. Diese hält durch eine besondere Beschaffenheit an der Unterseite besonders gut auf dem Heizbrett, dauert aber auch entsprechend lange zu drucken.
+Je nach dem, ob das Objekt eine kleine Standfläche hat und hoch ist, bzw. eine sehr breite Standfläche hält es unterschiedlich gut. Weiterhin ist es wichtig einen \enquote{Brim} oder einen \enquote{Raft} zu drucken. Ein \enquote{Brim} sind mehrere Linien um das Objekt herum, die schnell zu drucken sind und den Halt der Objektes verbessern. Ein \enquote{Raft} hingegen ist eine Plattform, auf der das Objekt gedruckt wird. Diese hält durch eine besondere Beschaffenheit an der Unterseite besonders gut auf dem Heizbrett, dauert aber auch entsprechend lange zu drucken.
 \item \textit{Position auf dem Heizbrett}\\
 Wir haben festgestellt, dass Objekte die auf der linken , hinteren Ecke gedruckt werden besser halten als andere.
 \item \textit{Der Extruder ist zu hoch über der Heizplatte}\\
 Wenn der Extruder zu hoch über der Heizplatte druckt, kühlt das Filament ab, bevor es auf die Heizplatte trifft und hält dort nicht mehr. Daher sollte man \textbf{VORSICHTIG} den Extruder über die Knöpfe herunter fahren.
 \item \textit{Wenn nichts hilft}\\
-Sonst haben wir in einem Forum gelesen, dass Hairspray (möglichst das billigste) auf der Heizplatte den Halt stark verbessert. Momentan liegt ein Haarspray bei dem 3D-Drucker dabei und hat auch schon seine Dienste geleistet.
+Sonst haben wir in einem Forum gelesen, dass Haarspray (möglichst das billigste) auf der Heizplatte den Halt stark verbessert. Momentan liegt ein Haarspray bei dem 3D-Drucker dabei und hat auch schon seine Dienste geleistet.
 \end{itemize}
 \vspace{10pt}
 
 \item \textbf{Der Extruder kratzt auf der Heizplatte.}\\
+\addcontentsline{toc}{subsection}{Der Extruder kratzt auf der Heizplatte}
 Sollte der Extruder auf der Heizplatte kratzen sollte der Druck direkt pausiert oder abgebrochen werden um Schaden an der Heizplatte zu verhindern. Wenn auf der Heizplatte leichte schwarze Spuren zu erkennen sind sollten diese im kalten Zustand der Heizplatte so weit wie möglich abgewischt werden. Das Problem liegt darin, dass die Heizplatte falsch gescannt wurde. Dies sollte dann nachgeholt werden. Auf dem 3D-Drucker im Menü \textit{Configuration/Z Calib./Heat Bed Scan} (siehe offizielles Manual S.57 ff.).\\
 Temporär kann man dies auch über die manuelle Kontrolle des Extruders beheben, wobei man unbedingt aufpassen muss, dass der Extruder nicht die Platte zerstört, oder die Platte den Z-Schalter.
 \vspace{10pt}
 
 \item \textbf{Das Filament bricht.}\\
-Wenn das Filament bricht ist es am sinnvollsten, das Filament direkt über dem Extruder, also zwischen Extruder und Z-Moter abzuschneiden und dann neues nachzufüllen. \textbf{ACHTUNG: dazu muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden.} Danach sollte noch ein bisschen Filament nachgedrückt werden um zu gewährleisten, dass das neue Filament auch in den Extruder eingefüllt wird.
+\addcontentsline{toc}{subsection}{Das Filament bricht}
+Wenn das Filament bricht ist es am sinnvollsten, das Filament direkt über dem Extruder, also zwischen Extruder und Z-Motor abzuschneiden und dann neues nachzufüllen. \textbf{ACHTUNG: dazu muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden.} Danach sollte noch ein bisschen Filament nachgedrückt werden um zu gewährleisten, dass das neue Filament auch in den Extruder eingefüllt wird.
 \vspace{10pt}
 
 \item \textbf{Der Extruder verstopft.}\\
-Jetzt weiß man auf jeden Fall, dass man einen der vorherigen Beschreibungen nicht richtig beachtet hat. Eigentlich ist der Extruder jetzt auszuwechseln, da dies aber kostspielig ist (\url{http://goo.gl/J6Bhq2} (Conrad.de 50\euro)) empfehlen wir zuerst zu versuchen, das Filament \textit{rauszuschmelzen}. Hierzu haben wir den Heizluft Föhn der Schule verwendet und den oberen Teil des Extruders so lange erhitzt, bis das Filament auf rausgelaufen ist und keines merh drin war. Hierbei muss man aber daruaf achten, dass die Kabel nicht schmelzen bzw. der Extruder anderweitig beschädigt wird. Andere Leute haben in Foreneinträgen berichtet, dass Filament aus dem Extruder \textit{rausgebohrt} zu haben. Dies haben wir uns nciht getraut, da wir keinen Milimeter genauen Bohrer zur Hand hatten.
+\addcontentsline{toc}{subsection}{Der Extruder verstopft}
+Jetzt weiß man auf jeden Fall, dass man einen der vorherigen Beschreibungen nicht richtig beachtet hat. Eigentlich ist der Extruder jetzt auszuwechseln, da dies aber kostspielig ist (\url{http://goo.gl/J6Bhq2} (Conrad.de 50\euro)) empfehlen wir zuerst zu versuchen, das Filament \textit{rauszuschmelzen}. Hierzu haben wir den Heizluft Föhn der Schule verwendet und den oberen Teil des Extruders so lange erhitzt, bis das Filament auf raus gelaufen ist und keines mehr drin war. Hierbei muss man aber darauf achten, dass die Kabel nicht schmelzen bzw. der Extruder anderweitig beschädigt wird. Andere Leute haben in Foreneinträgen berichtet, dass Filament aus dem Extruder \textit{rausgebohrt} zu haben. Dies haben wir uns nicht getraut, da wir keinen Millimeter genauen Bohrer zur Hand hatten.
 \end{description}
 \end{document}
