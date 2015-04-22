@@ -42,7 +42,7 @@ Unter \textit{Support} finden sich Einstellungen, die den Drucker bei schwereren
 Probleme:
 -Aus Extruder kommt nichts raus
 -Druck hält nicht
--Extruder kratzt auf Heatbed
+-Extruder kratzt auf der Heizplatte
 -Filament bricht
 -Extruder verstopft (sollte bei Beachtung der anderen Fehler nicht passiere)
 \fi
@@ -52,12 +52,26 @@ Beim Drucken von 3D Objekten können viele verschieden und unterschiedlich schwe
 \item \textbf{Aus dem Extruder kommt nichts heraus.}\\
 Für dieses Problem kann es verschiedene Ursachen geben:
 \begin{itemize}
-\item \textit{Es ist kein Filament eingelegt}\\
+\item \textit{Es ist kein Filament eingelegt:}\\
 In diesem Fall ist der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA $210^\circ$C) zu erhitzen. Wenn dieser heiß ist kann man das Filament in den Extruder einführen und den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 
-\item \textit{Es ist vorher Filament aus dem Extruder gelaufen, ohne, dass welches nachgechoben wurde}\\
-
+\item \textit{Es ist vorher Filament aus dem Extruder gelaufen, ohne, dass welches nachgechoben wurde:}\\
+In diesem Fall muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$) erhitzt werden. Wenn dieser heiß ist kann man den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
+\textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
+\end{itemize}
+\vspace{10pt}
+\item \textbf{Das gedruckte Objekt hält nicht auf der Heizplatte.}\\
+Für dieses Problem gibt es keine ultimative Lösung. Wir haben haben mehrere Faktoren gefunden, die dafür verantwortlich sind:
+\begin{itemize}
+\item \textit{Temperatur der Heizplatte}\\
+Die Temperatur der Heizplatte ist zumindest für PLA auf $60^\circ$ zu erhitzen.
+\item \textit{Beschaffenheit des Objekts}\\
+Je nach dem, ob das Objekt eine kleine Standfläche hat und hoch ist, bzw. eine sehr breite Standfläche hält es unterschiedlich gut. Weiterhin ist es wichtig einen \enquote{Brim} oder einen \enquote{Raft} zu drucken. Ein \enquote{Brim} sind mehrere Linien um das objekt herum, die schnell zu drucken sind und den Halt der Objektes verbessern. Ein \enquote{Raft} hingegen ist eine Platform, auf der das Objekt gedruckt wird. Diese hält durch eine besondere Beschaffenheit an der Unterseite besonders gut auf dem Heizbrett, dauert aber auch entsprechend lange zu drucken.
+\item \textit{Position auf dem Heizbrett}\\
+Wir haben festgestellt, dass Objekte die auf der linken , hinteren Ecke gedruckt werden besser halten als andere.
+\item \textit{Wenn nichts hilft}\\
+Sonst haben wir in einem Forum gelesen, dass Hairspray (möglichst das billigste) auf der Heizplatte den Halt stark verbessert. Momentan liegt ein Haarspray bei dem 3D-Drucker dabei und hat auch schon seine Dienste geleistet.
 \end{itemize}
 \end{description}
 \end{document}
