@@ -10,9 +10,11 @@
 \usepackage[autostyle]{csquotes}
 \usepackage{eurosym}
 \usepackage[left=2.54cm,right=2.54cm,top=2.54cm,bottom=2.54cm]{geometry}
+\usepackage[affil-it]{authblk}
 
 \author{Leonard Hackel, Jochen Jacobs, Niklas Schelten}
-\title{Manual zur Benutzung des 3D-Druckers}
+\affil{Herder-Gymnasium}
+\title{Manual zur Benutzung des RF1000}
 \begin{document}
 \maketitle
 \begin{center}
@@ -23,7 +25,7 @@
 \vspace{11pt}
 %---------------------------Jochen----------------------------------------------
 \section{Erstellen von 3D Objekten}
-Für die Erstellung von 3d-Objekten ist die Verwendung von spezieller 3d-Software notwendig. Welche Software am sinnvollsten ist, hängt von dem zu erstellenden Objekt ab. Organische Objekte werden am Besten mit einem \enquote{normalen} 3d-Programm wie \textbf{Blender} erstellt, Während technische Objekte wie Zahnräder mit einem \textit{computer-aided design}-Programm (kurz CAD-Programm) erstellt - hier empfehle ich das kostenlose Programm \textbf{FreeCAD}. Beide Programme können Modelle als stl-Datei speichern - Dieses Format ist im 3d-Druck üblich. Im Gegensatz zur herkömmlichen 3d-Modellierung muss bei der Erstellung von zu druckenden Objekten nicht versucht werden die Anzahl der Polygone möglichst gering zu halten - im Gegenteil kann eine größere Anzahl an Polygonen nie schaden: Der 3d-Drucker beachtet die in der 3d-Graphik häufig benutzten Normalen nicht - dadurch erscheinen gedruckte Objekte sehr viel weniger Rund als sie auf dem Bildschirm aussehen.
+Für die Erstellung von 3D-Objekten ist die Verwendung von spezieller 3D-Software notwendig. Welche Software am sinnvollsten ist, hängt von dem zu erstellenden Objekt ab. Organische Objekte werden am Besten mit einem \enquote{normalen} 3D-Programm wie \textbf{Blender} erstellt, Während technische Objekte wie Zahnräder mit einem \textit{computer-aided design}-Programm (kurz CAD-Programm) erstellt - hier empfehle ich das kostenlose Programm \textbf{FreeCAD}. Beide Programme können Modelle als stl-Datei speichern - Dieses Format ist im 3D-Druck üblich. Im Gegensatz zur herkömmlichen 3D-Modellierung muss bei der Erstellung von zu druckenden Objekten nicht versucht werden die Anzahl der Polygone möglichst gering zu halten - im Gegenteil kann eine größere Anzahl an Polygonen nie schaden: Der 3D-Drucker beachtet die in der 3D-Graphik häufig benutzten Normalen nicht - dadurch erscheinen gedruckte Objekte sehr viel weniger Rund als sie auf dem Bildschirm aussehen.
 
 Die Verwendung der beiden Programme ist sehr komplex und kann hier nicht komplett beschrieben werden. Besonders zu empfehlen sind gerade in diesem Bereich auch Tutorial-Videos auf YouTube. Als Beispiel zur Erstellung habe ich zu beiden Programmen je ein kurzes Video erstellt und auf YouTube hochgeladen:
 \begin{itemize}
@@ -38,19 +40,20 @@ Die Verwendung der beiden Programme ist sehr komplex und kann hier nicht komplet
   \item \textbf{FreeCAD} \url{http://www.freecadweb.org/}
 \end{itemize}
 
-\subsection*{Andere M"oglichkeiten zur Generierung von 3d-Objekten}
-\addcontentsline{toc}{subsection}{Andere M"oglichkeiten zur Generierung von 3d-Objekten}
-3d-Objekte k"onnen auch erhalten werden, indem sie ...
+\subsection*{Andere M"oglichkeiten zur Generierung von 3D-Objekten}
+\addcontentsline{toc}{subsection}{Andere M"oglichkeiten zur Generierung von 3D-Objekten}
+3D-Objekte k"onnen auch erhalten werden, indem sie ...
 \begin{itemize}
   \item[...] aus dem Internet heruntergeladen werden.
   \item[...] aus Hightmaps generiert werden (Hightmaps können direkt in Cura geladen werden)
-  \item[...] aus Minecraft-Maps generiert werden (Cura \-> Tools \-> Minecraft Map Import)
-  \item[...] mittel eines 3d-Scanners eingescanned werden
+  \item[...] aus Minecraft-Maps generiert werden (Cura $\rightarrow$ Tools $\rightarrow$ Minecraft Map Import)
+  \item[...] mittel eines 3D-Scanners eingescanned werden
   \item[...] zufällig erstellt werden
 \end{itemize}
 
 %---------------------------Jochen----------------------------------------------
 \section{Der Druck}
+Für die folgende Erklärung benutzen wir die Drucker Software Cura (\url{https://software.ultimaker.com/}). Standardmäßig empfiehlt Conrad zwar eine modifizierte Variante des RepetierHost, die auf der SD-Karte beiliegt, aber wir empfehlen Cura zu benutzten, um mehr Einstellungsmöglichkeiten zu haben.
 % neuen Drucker hinzufügen/vor der ersten Nutzung
 \subsection*{Einen neuen Drucker hinzufügen}
 \addcontentsline{toc}{subsection}{Einen neuen Drucker hinzufügen}
@@ -62,7 +65,7 @@ Um nun in diese Ansicht zu gelangen, muss man bei Cura im Reiter \textit{Expert}
 \subsection*{Basic}
 \addcontentsline{toc}{subsection}{Basic}
 Das Vorschaufenster bei Cura besteht aus zwei großen Teilen. Auf der linken Seite sind die Einstellungen, auf der rechten ist eine 3D-Ansicht des Objektes. Dabei sind verschiedene Strecken in verschiedenen Farben angezeigt. Innenstrecken sind dabei grün, Druckstrecken, die später Außenflächen ergeben, sind rot, und Strecken, welche der Druckkopf zurücklegt, dabei aber nicht druckt, sind dünner und blau. In gelb dargestellt sind diejenigen Strecken, die später Füllung sind.\\
-Die meisten Einstellungen sind selbsterklärend. So gibt die \textit{Layer heigt} an, wie hoch die einzelnen Drucklagen sind, wodurch damit auch die Anzahl der Lagen bestimmt wird. \textit{Shell thickness} gibt an, wie viele Spuren außen gedruckt werden, bevor der Bereich als Innenraum gilt und nur zu einem bestimmten Prozentsatz gefüllt wird. dieser ist unter \textit{Fill Density} einstellbar. So wie \textit{Shell thickness} die Dicke der seitlichen Außenhaut angibt, gibt \textit{Bottom/Top thickness} dies für die oberen und unteren Schichten an.\\
+Die meisten Einstellungen sind selbsterklärend. So gibt die \textit{Layer heigt} an, wie hoch die einzelnen Drucklagen sind, wodurch damit auch die Anzahl der Lagen bestimmt wird. \textit{Shell thickness} gibt an, wie viele Spuren außen gedruckt werden, bevor der Bereich als Innenraum gilt und nur zu einem bestimmten Prozentsatz gefüllt wird. Dieser ist unter \textit{Fill Density} einstellbar. So wie \textit{Shell thickness} die Dicke der seitlichen Außenhaut angibt, gibt \textit{Bottom/Top thickness} dies für die oberen und unteren Schichten an.\\
 \textit{Print speed} gibt an, wie schnell sich der Druckkopf relativ zu der Heizplatte bewegt, wenn er druckt (unter \textit{Advaced} gibt es noch andere Bewegungsarten). Hierbei gilt generell, dass eine geringere Geschwindigkeit die Qualität, allerdings auch die Druckzeit erhöht, wodurch ein geeignetes Mittelmaß zu finden ist. \textit{Printing temperature} und \textit{Bed temperature} sind von dem Druckmaterial abhängig, für PLA empfiehlt sich 210/60. Generell empfehlen wir die oben gezeigten Werte für die bisher genannten Einstellungen bei einem Druck mit PLA.\\
 Unter \textit{Support} finden sich Einstellungen, die den Drucker bei schwereren Aufgaben wie Überhängen unterstützen. Sollte das Objekt Überhänge haben, empfehlen wir den \textit{Support type} \textit{Touching buildplate}, wenn es sich aber nur um kleine oder steile Überhänge handelt, ist ein Support nicht empfehlenswert (ab 60\% ist Support benötigt, ansonsten muss von Fall zu Fall unterschieden werden). Als \textit{Platform adhesion type} empfehlen wir einen \textit{Brim} der Breite 10, damit sich der Drucker \enquote{eindrucken} kann, wodurch Filamentaussetzer und Stotterer vermieden werden. Bei Objekten, welche leicht umfallen oder wackeln, ist ein \textit{Raft} zu empfehlen, da es den Druck stabilisiert. Allerdings kostet der Druck eines solchen viel Zeit.\\
 \textit{Filament}-Settings sollten bei 3 (\textit{Diameter}) und 100(\textit{Flow}) gelassen werden.\\
@@ -77,10 +80,10 @@ Unter \textit{Support} finden sich Einstellungen, die den Drucker bei schwereren
 \end{minipage}
 \begin{minipage}{.47\textwidth}
 Diese Einstellungen zu verändern ist meist nicht wirklich lohnenswert, allerdings manchmal hilfreich. Unter \textit{Machine} sollte man nichts verändern, da dies maschinenspezifisch ist. Diese Einstellung ist nicht druckrelevant, sondern abhängig vom Aufbau des Extruders. Unter dem Reiter \textit{Retraction} findet man die Einstellungen, wie weit das Filament bei Strecken, während denen nicht gedruckt wird, zurückgezogen wird, und wie weit der Extruder sich vom Druck abheben soll. Hier lohnen sich Veränderungen nicht.\\
-Unter \textit{Quality} lassen sich von oben nach unten die Dicke der ersten Ebene, Linienabstand der Schicht, ob das Objekt unten abgeschnitten werden soll und (für den uns uninteressant, da nicht nutzbar)die Überlappung der Schichten bei zwei Extrudern einstellen.\\
+Unter \textit{Quality} lassen sich von oben nach unten die Dicke der ersten Ebene, Linienabstand der Schicht, ob das Objekt unten abgeschnitten werden soll und (für den uns uninteressant, da nicht nutzbar) die Überlappung der Schichten bei zwei Extrudern einstellen.\\
 \end{minipage}
 \end{figure}
-Unter \textit{Speed} lassen sich bestimmte Geschwindigkeiten einstellen. \textit{Travel speed} gilt für alle Strecken, bei denen nicht gedruckt wird (unter einer hohen Geschwindigkeit leidet die Qualität hier zwar nur wenig, allerdings spart man auch nicht viel Zeit), \textit{Bottom layer speed} nur für die unterste Ebene, welche für einen guten Druck eher langsam gedruckt werden sollte, \textit{Infill speed} gilt für Strecken, welche In Massivteilen gedruckt werden (bzw. in Rastern bei nicht voller Füllung), \textit{Outer} und \textit{Inner shell speed} gelten für die äußerste und innerste Schicht (Veränderung lohnt sich bei diesen dreien nur bei sehr großen Objekten mit viel Oberfläche oder Innenraum, der unsauber gedruckt werden kann oder sehr sauber gedruckt werden muss). \textit{0.0} als Wert heißt, dass die Standartgeschwindigkeit aus \textit{Basic} übernommen wird. \\
+Unter \textit{Speed} lassen sich bestimmte Geschwindigkeiten einstellen. \textit{Travel speed} gilt für alle Strecken, bei denen nicht gedruckt wird (unter einer hohen Geschwindigkeit leidet die Qualität hier zwar nur wenig, allerdings spart man auch nicht viel Zeit), \textit{Bottom layer speed} nur für die unterste Ebene, welche für einen guten Druck eher langsam gedruckt werden sollte, \textit{Infill speed} gilt für Strecken, welche in Massivteilen gedruckt werden (bzw. in Rastern bei nicht voller Füllung), \textit{Outer} und \textit{Inner shell speed} gelten für die äußerste und innerste Schicht (Veränderung lohnt sich bei diesen dreien nur bei sehr großen Objekten mit viel Oberfläche oder Innenraum, der unsauber gedruckt werden kann oder sehr sauber gedruckt werden muss). \textit{0.0} als Wert heißt, dass die Standartgeschwindigkeit aus \textit{Basic} übernommen wird. \\
 Unter \textit{Cool} findet man Einstellungen, welche die Kühlung betreffen. \textit{Minimal layer time} gibt die minimale Zeit einer Ebene an (sinnvoll bei sehr kleinen Objekten, damit die Ebene abkühlen kann, bevor die nächste darauf gedruckt wird; dies verhindert Unsauberkeiten). Unter \textit{Enable cooling fan} lässt sich der Kühler am Extruder einschalten, bei \textit{[...]} lassen sich außerdem weitere Einstellungen dazu finden. So kann man einstellen, ob der Lüfter erst ab einer bestimmten Höhe beginnt und/oder eine minimale oder maximale Geschwindigkeit hat. Bei einer Einstellung von 0.1 mm Schichtdicke und 0.2 für die erste Schicht, wird bei einer Einstellung von Gebläse ab 1mm ab der neunten Ebene der Lüfter aktiviert.
 \subsection*{Druck starten}
 \addcontentsline{toc}{subsection}{Druck starten}
@@ -106,11 +109,11 @@ Beim Drucken von 3D Objekten können viele verschieden und unterschiedlich schwe
 Für dieses Problem kann es verschiedene Ursachen geben:
 \begin{itemize}
 \item \textit{Es ist kein Filament eingelegt:}\\
-In diesem Fall ist der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA $210^\circ$C) zu erhitzen. Wenn dieser heiß ist kann man das Filament in den Extruder einführen und den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
+In diesem Fall ist der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA $210^\circ$C) zu erhitzen. Wenn dieser heiß ist, kann man das Filament in den Extruder einführen und den Extrudervorschub manuell erhöhen, bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 
 \item \textit{Es ist vorher Filament aus dem Extruder gelaufen, ohne, dass welches nachgeschoben wurde:}\\
-In diesem Fall muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden. Wenn dieser heiß ist kann man den Extrudervorschub manuell erhöhen bis unten Filament heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
+In diesem Fall muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden. Wenn dieser heiß ist, kann man den Extrudervorschub manuell erhöhen, bis unten Filament unten heraus tropft. Dies kann lange dauern, wenn der Extruder vorher leer war.\\
 \textbf{ACHTUNG: Bei zu schnellem Vorschieben kann es passieren, dass das Filament sich nicht schnell genug erhitzt und dann den Extruder verstopft.}
 \end{itemize}
 
@@ -123,7 +126,7 @@ Die Temperatur der Heizplatte ist zumindest für PLA auf $60^\circ$ zu erhitzen.
 \item \textit{Beschaffenheit des Objekts}\\
 Je nach dem, ob das Objekt eine kleine Standfläche hat und hoch ist, bzw. eine sehr breite Standfläche hält es unterschiedlich gut. Weiterhin ist es wichtig einen \enquote{Brim} oder einen \enquote{Raft} zu drucken. Ein \enquote{Brim} sind mehrere Linien um das Objekt herum, die schnell zu drucken sind und den Halt der Objektes verbessern. Ein \enquote{Raft} hingegen ist eine Plattform, auf der das Objekt gedruckt wird. Diese hält durch eine besondere Beschaffenheit an der Unterseite besonders gut auf dem Heizbrett, dauert aber auch entsprechend lange zu drucken.
 \item \textit{Position auf dem Heizbrett}\\
-Wir haben festgestellt, dass Objekte die auf der linken , hinteren Ecke gedruckt werden besser halten als andere.
+Wir haben festgestellt, dass Objekte die auf der linken, hinteren Ecke gedruckt werden besser halten als andere.
 \item \textit{Der Extruder ist zu hoch über der Heizplatte}\\
 Wenn der Extruder zu hoch über der Heizplatte druckt, kühlt das Filament ab, bevor es auf die Heizplatte trifft und hält dort nicht mehr. Daher sollte man \textbf{VORSICHTIG} den Extruder über die Knöpfe herunter fahren.
 \item \textit{Wenn nichts hilft}\\
@@ -132,19 +135,33 @@ Sonst haben wir in einem Forum gelesen, dass Haarspray (möglichst das billigste
 
 \item \textbf{Der Extruder kratzt auf der Heizplatte.}\\
 \addcontentsline{toc}{subsection}{Der Extruder kratzt auf der Heizplatte}
-Sollte der Extruder auf der Heizplatte kratzen sollte der Druck direkt pausiert oder abgebrochen werden um Schaden an der Heizplatte zu verhindern. Wenn auf der Heizplatte leichte schwarze Spuren zu erkennen sind sollten diese im kalten Zustand der Heizplatte so weit wie möglich abgewischt werden. Das Problem liegt darin, dass die Heizplatte falsch gescannt wurde. Dies sollte dann nachgeholt werden. Auf dem 3D-Drucker im Menü \textit{Configuration/Z Calib./Heat Bed Scan} (siehe offizielles Manual S.57 ff.).\\
-Temporär kann man dies auch über die manuelle Kontrolle des Extruders beheben, wobei man unbedingt aufpassen muss, dass der Extruder nicht die Platte zerstört, oder die Platte den Z-Schalter.
+Sollte der Extruder auf der Heizplatte kratzen, sollte der Druck direkt pausiert oder abgebrochen werden, um Schaden an der Heizplatte zu verhindern. Wenn auf der Heizplatte leichte schwarze Spuren zu erkennen sind, sollten diese im kalten Zustand der Heizplatte so weit wie möglich abgewischt werden. Das Problem liegt darin, dass die Heizplatte falsch gescannt wurde. Dies sollte dann nachgeholt werden. Auf dem 3D-Drucker im Menü \textit{Configuration/Z Calib./Heat Bed Scan} (siehe offizielles Manual S.57 ff.).\\
+Temporär kann man dies auch über die manuelle Kontrolle des Extruders beheben, wobei man unbedingt aufpassen muss, dass der Extruder nicht die Platte zerstört oder die Platte den Z-Schalter.
 
 \item \textbf{Das Filament bricht.}\\
 \addcontentsline{toc}{subsection}{Das Filament bricht}
 Wenn das Filament bricht ist es am sinnvollsten, das Filament direkt über dem Extruder, also zwischen Extruder und Z-Motor abzuschneiden und dann neues nachzufüllen. \textbf{ACHTUNG: dazu muss der Extruder auf die für das gewünschte Filament benötigte Temperatur (PLA: $210^\circ$C) erhitzt werden.} Danach sollte noch ein bisschen Filament nachgedrückt werden um zu gewährleisten, dass das neue Filament auch in den Extruder eingefüllt wird.
 
+\item \textbf{Das Filament ist verknotet.}\\
+\addcontentsline{toc}{subsection}{Das Filament ist verknotet}
+Dies sollte möglichst vor dem Druck verhindert werden, da sonst das Filament während das Drucks bricht und der Druck damit nicht erfolgreich sein wird. Daher sollte das Filament auf der Rolle immer ordentlich aufgerollt sein und gegebenenfalls geordnet werden.
+
+\item \textbf{Der Extrudervorschub dreht durch.}
+\addcontentsline{toc}{subsection}{Der Extrudervorschub dreht durch}
+Sobald der Extrudervorschub durchdreht gibt es genau zwei Möglichkeiten:
+\begin{itemize}
+\item \textit{Das Filament kann nicht in den Extruder eingeführt werden}\\
+Wenn man gerade neues Filament eingeführt hat, kann es sein, dass das Filament an der Kante des Extruders hängen bleibt und daher nicht in den Extruder eingeführt werden kann. Dann sollte man vorsichtig mit einer dünnen Zange versuchen, das Filament in den Extruder zu leiten.
+\item \textit{Der Extruder ist verstopft.}\\
+Tja das ist sch****. Siehe unten.
+\end{itemize}
+
 \item \textbf{Der Extruder verstopft.}\\
 \addcontentsline{toc}{subsection}{Der Extruder verstopft}
-Jetzt weiß man auf jeden Fall, dass man einen der vorherigen Beschreibungen nicht richtig beachtet hat. Eigentlich ist der Extruder jetzt auszuwechseln, da dies aber kostspielig ist (\url{http://goo.gl/J6Bhq2} (Conrad.de 50\euro)) empfehlen wir zuerst zu versuchen, das Filament \textit{herauszuschmelzen}. Hierzu haben wir den Heizluft Föhn der Schule verwendet und den oberen Teil des Extruders so lange erhitzt, bis das Filament auf raus gelaufen ist und keines mehr drin war. Hierbei muss man aber darauf achten, dass die Kabel nicht schmelzen bzw. der Extruder anderweitig beschädigt wird. Andere Leute haben in Foreneinträgen berichtet, dass Filament aus dem Extruder \textit{rausgebohrt} zu haben. Dies haben wir uns nicht getraut, da wir keinen Millimeter genauen Bohrer zur Hand hatten.
+Jetzt weiß man auf jeden Fall, dass man einen der vorherigen Beschreibungen nicht richtig beachtet hat. Eigentlich ist der Extruder jetzt auszuwechseln, da dies aber kostspielig ist (\url{http://goo.gl/J6Bhq2} (Conrad.de 50\euro)) empfehlen wir zuerst zu versuchen, das Filament \textit{herauszuschmelzen}. Hierzu haben wir den Heizluftföhn der Schule verwendet und den oberen Teil des Extruders so lange erhitzt, bis das Filament auf raus gelaufen ist und keines mehr drin war. Hierbei muss man aber darauf achten, dass die Kabel nicht schmelzen bzw. der Extruder anderweitig beschädigt wird. Andere Leute haben in Foreneinträgen berichtet, dass Filament aus dem Extruder \textit{rausgebohrt} zu haben. Dies haben wir uns nicht getraut, da wir keinen Millimetergenauen Bohrer zur Hand hatten.
 
 \item \textbf{Der Drucker wird nicht erkannt.}\\
-\addcontentsline{toc}{subsection}{Der Drucker wird nicht erkannt.}
+\addcontentsline{toc}{subsection}{Der Drucker wird nicht erkannt}
 Hierfür gibt es viele verschiedene Möglichkeiten:
 \begin{itemize}
 \item \textit{Der Drucker ist aus}\\
